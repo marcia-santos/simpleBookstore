@@ -1,0 +1,19 @@
+{% extends "base_layout.html" %}
+{% set active_page = "pedidos" %}
+
+{% block content %}
+    <h4>Pedidos</h4>
+    <hr>
+
+    {% for pedido_finalizado in pedidos_finalizados %}
+    <div class="card text-dark border-secundary">
+        <div class="card-header"> <b>Número do pedido: {{pedido_finalizado.id}}</b>
+        </div>
+        <div class="card-body">
+            <p class="card-text">Data do pedido: {{pedido_finalizado.dataPedido}}</p>
+        </div>
+    </div>
+    <br/>
+    {% endfor %}
+
+{% endblock %}

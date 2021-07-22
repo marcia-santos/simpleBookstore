@@ -1,0 +1,48 @@
+{% extends "base_layout.html" %}
+{% set active_page = "cadastar_livro" %}
+
+{% block content %}
+    <h4>Cadastro</h4>
+    <hr>
+
+    <div class="container">
+        <form action="" method="POST">
+          <div class="mb-3">
+              <label for=titulo class="form-label"><b>Título</b></label>
+              <input type="text" class="form-control" id="titulo">
+              <div id="cadastro_livro" class="form-text">Insira o título do livro</div>
+
+          </div>
+          <div class="mb-3">
+              <label for="isbn" class="form-label"><b>ISBN</b></label>
+              <input type="text" class="form-control" id="isbn">
+              <div class="form-text">Insira o ISBN do livro</div>
+          </div>
+          <div class="mb-3">
+              <label for="autor" class="form-label"><b>Autor</b></label>
+              <input type="text" class="form-control" id="autor">
+              <div class="form-text">Insira o autor do livro</div>
+          </div>
+          <div class="mb-3">
+              <label for="ano" class="form-label"><b>Ano publicação</b></label>
+              <input type="text" class="form-control" id="ano">
+              <div class="form-text">Insira o ano de publicação do livro</div>
+          </div>
+          <div class="mb-3">
+              <label for="preco" class="form-label"><b>Preço</b></label>
+              <input type="text" class="form-control" id="preco">
+              <div class="form-text">Insira o preço do livro</div>
+          </div>
+          <div class="mb-3">
+              <label for="estoque" class="form-label"><b>Estoque</b></label>
+              <input type="text" class="form-control" id=form.estoque>
+              <div class="form-text">Insira o estoque do livro disponível</div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-dark">Cadastrar</button>
+        </form>
+    </div>
+
+    <hr>
+{% endblock %}
+
+{{form.titulo}}
